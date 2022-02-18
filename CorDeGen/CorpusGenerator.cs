@@ -20,7 +20,7 @@ namespace CorDeGen
 
         public string[] GetCorpus()
         {
-            var memory = _termCount * _textCount * _textCount / (_textCount / 5 + 1);
+            var memory = _termCount * _textCount * _textCount / (_textCount / 5 + 2);
             var texts = Enumerable.Range(0, _textCount).Select(x => new StringBuilder(memory)).ToArray();
 
             for (int termIndex = 0; termIndex < _termCount; termIndex++)
