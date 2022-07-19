@@ -4,6 +4,9 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Authors>yakivyusin</Authors>
+    <Description>CorDeGen implementation</Description>
+    <RepositoryUrl>https://github.com/yakivyusin/CorDeGenComplete</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
