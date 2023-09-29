@@ -1,10 +1,6 @@
-﻿namespace CorDeGen.TermPresenters
+﻿namespace CorDeGen.TermPresenters;
+
+internal sealed class DefaultTermPresenter : ITermPresenter
 {
-    internal sealed class DefaultTermPresenter : ITermPresenter
-    {
-        public string GetTermPresentation(int termsCount, int termIndex)
-        {
-            return Convert.ToString(termIndex, 16);
-        }
-    }
+    public string GetTermPresentation(int termsCount, int termIndex) => Convert.ToString(termIndex, 16);
 }

@@ -1,39 +1,38 @@
-﻿namespace CorDeGen.TermPresenters
+﻿namespace CorDeGen.TermPresenters;
+
+internal sealed class PlusEnglishTermPresenter : ITermPresenter
 {
-    internal sealed class PlusEnglishTermPresenter : ITermPresenter
+    public string GetTermPresentation(int termsCount, int termIndex)
     {
-        public string GetTermPresentation(int termsCount, int termIndex)
+        var term = Convert.ToString(termIndex, 16);
+
+        while (!IsValidPresentation(term))
         {
-            var term = Convert.ToString(termIndex, 16);
+            termIndex += termsCount;
 
-            while (!IsValidPresentation(term))
-            {
-                termIndex += termsCount;
-
-                term = Convert.ToString(termIndex, 16);
-            }
-
-            return term;
+            term = Convert.ToString(termIndex, 16);
         }
 
-        private static bool IsValidPresentation(string term)
+        return term;
+    }
+
+    private static bool IsValidPresentation(string term)
+    {
+        if (term.Length == 1)
         {
-            if (term.Length == 1)
-            {
-                return false;
-            }
-
-            if (term == "be")
-            {
-                return false;
-            }
-
-            if (term.All(c => char.IsDigit(c)))
-            {
-                return false;
-            }
-
-            return true;
+            return false;
         }
+
+        if (term == "be")
+        {
+            return false;
+        }
+
+        if (term.All(c => char.IsDigit(c)))
+        {
+            return false;
+        }
+
+        return true;
     }
 }
