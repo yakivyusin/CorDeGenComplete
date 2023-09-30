@@ -1,4 +1,3 @@
 ﻿using BenchmarkDotNet.Running;
-using CorDeGen.Benchmark;
 
-BenchmarkRunner.Run<Benchmark>();
+BenchmarkSwitcher.FromAssembly(typeof(Program).Assembly).Run(args);
