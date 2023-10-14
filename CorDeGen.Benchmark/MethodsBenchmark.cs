@@ -4,7 +4,7 @@ namespace CorDeGen.Benchmark;
 
 [MemoryDiagnoser]
 [JsonExporterAttribute.Brief]
-public class Benchmark
+public class MethodsBenchmark
 {
     [Params(100, 500, 2_500, 12_500, 62_500, 312_500)]
     public int N { get; set; }
