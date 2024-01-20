@@ -2,17 +2,19 @@
 
 namespace CorDeGen;
 
-public sealed class CorpusGenerator
+public sealed class NaiveParallelCorpusGenerator
 {
     private readonly int _termCount;
     private readonly int _textCount;
     private readonly int _r;
     private readonly ITermPresenter _termPresenter;
+    private readonly int _parallelismDegree;
 
-    public CorpusGenerator(int termCount, ITermPresenter termPresenter)
+    public NaiveParallelCorpusGenerator(int termCount, ITermPresenter termPresenter, int parallelismDegree)
     {
         _termCount = termCount;
         _termPresenter = termPresenter;
+        _parallelismDegree = parallelismDegree;
 
         _textCount = (int)Math.Pow(_termCount, 0.25);
         _r = _textCount / 5 + 1;
@@ -22,8 +24,12 @@ public sealed class CorpusGenerator
     {
         var memory = _termCount * _textCount * _textCount / (_textCount / 5 + 2);
         var texts = Enumerable.Range(0, _textCount).Select(x => new StringBuilder(memory)).ToArray();
+        var options = new ParallelOptions
+        {
+            MaxDegreeOfParallelism = _parallelismDegree
+        };
 
-        for (int termIndex = 0; termIndex < _termCount; termIndex++)
+        Parallel.For(0, _termCount, options, termIndex =>
         {
             var term = _termPresenter.GetTermPresentation(_termCount, termIndex);
             var termTotalCount = _textCount * (termIndex % _textCount + 1);
@@ -38,12 +44,17 @@ public sealed class CorpusGenerator
                     termCount *= 2;
                 }
 
-                texts[GetArraySafeIndex(textIndex)].AppendLine(
-                    string.Join(
-                        ' ',
-                        Enumerable.Repeat(term, termCount)));
+                var safeIndex = GetArraySafeIndex(textIndex);
+
+                lock (texts[safeIndex])
+                {
+                    texts[safeIndex].AppendLine(
+                        string.Join(
+                            ' ',
+                            Enumerable.Repeat(term, termCount)));
+                }
             }
-        }
+        });
 
         return texts.Select(x => x.ToString()).ToArray();
     }
