@@ -47,6 +47,25 @@ namespace CorDeGen.Tests.Unit
         }
 
         [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "3f2")]
+        [InlineData(17, "3f9")]
+        [InlineData(26, "1a")]
+        [InlineData(173, "87d")]
+        [InlineData(218, "4c2")]
+        [InlineData(237, "4d5")]
+        [InlineData(250, "4e2")]
+        [InlineData(3788, "12b4")]
+        [InlineData(60350, "efa6")]
+        [InlineData(65230, "102b6")]
+        public void PlusItalianPresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.PlusItalian.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
         [InlineData(0, "be")]
         [InlineData(10, "we")]
         [InlineData(17, "make")]
