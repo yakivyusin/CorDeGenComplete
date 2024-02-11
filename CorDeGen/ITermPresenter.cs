@@ -8,6 +8,8 @@ public interface ITermPresenter
 
     public static ITermPresenter PlusEnglish => new PlusEnglishTermPresenter();
 
+    public static ITermPresenter PlusGerman => new PlusGermanTermPresenter();
+
     public static ITermPresenter Semantic => new SemanticTermPresenter();
 
     string GetTermPresentation(int termsCount, int termIndex);
