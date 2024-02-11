@@ -33,6 +33,20 @@ namespace CorDeGen.Tests.Unit
         }
 
         [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "3f2")]
+        [InlineData(17, "3f9")]
+        [InlineData(26, "1a")]
+        [InlineData(171, "87b")]
+        [InlineData(218, "4c2")]
+        public void PlusGermanPresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.PlusGerman.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
         [InlineData(0, "be")]
         [InlineData(10, "we")]
         [InlineData(17, "make")]
