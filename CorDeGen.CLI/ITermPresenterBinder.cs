@@ -15,6 +15,7 @@ public class ITermPresenterBinder : BinderBase<ITermPresenter>
         "plus" => ITermPresenter.PlusEnglish,
         "plus-en" => ITermPresenter.PlusEnglish,
         "plus-de" => ITermPresenter.PlusGerman,
+        "plus-it" => ITermPresenter.PlusItalian,
         "semantic" => ITermPresenter.Semantic,
         _ => ITermPresenter.Default
     };
