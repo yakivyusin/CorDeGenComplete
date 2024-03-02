@@ -10,6 +10,8 @@ public interface ITermPresenter
 
     public static ITermPresenter PlusGerman => new PlusGermanTermPresenter();
 
+    public static ITermPresenter PlusFrench => new PlusFrenchTermPresenter();
+
     public static ITermPresenter PlusItalian => new PlusItalianTermPresenter();
 
     public static ITermPresenter Semantic => new SemanticTermPresenter();
