@@ -6,6 +6,8 @@ public interface ITermPresenter
 {
     public static ITermPresenter Default => new DefaultTermPresenter();
 
+    public static ITermPresenter PlusDigits => new PlusDigitsTermPresenter();
+
     public static ITermPresenter PlusEnglish => new PlusEnglishTermPresenter();
 
     public static ITermPresenter PlusGerman => new PlusGermanTermPresenter();
