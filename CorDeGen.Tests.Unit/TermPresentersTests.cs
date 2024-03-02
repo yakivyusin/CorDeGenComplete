@@ -21,6 +21,19 @@ namespace CorDeGen.Tests.Unit
 
         [Theory]
         [InlineData(0, "3e8")]
+        [InlineData(10, "a")]
+        [InlineData(17, "3f9")]
+        [InlineData(26, "1a")]
+        [InlineData(256, "4e8")]
+        public void PlusDigitsPresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.PlusDigits.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
+        [InlineData(0, "3e8")]
         [InlineData(10, "3f2")]
         [InlineData(17, "3f9")]
         [InlineData(26, "1a")]

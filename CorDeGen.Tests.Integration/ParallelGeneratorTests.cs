@@ -12,6 +12,15 @@ public class ParallelGeneratorTests
     }
 
     [Property]
+    public Property ParallelGeneratorTest_PlusDigitsPresenter(PositiveInt termCount)
+    {
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.PlusDigits).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.PlusDigits, Environment.ProcessorCount).GetCorpus();
+
+        return actualTexts.SequenceEqual(expectedTexts).ToProperty();
+    }
+
+    [Property]
     public Property ParallelGeneratorTest_PlusEnglishPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.PlusEnglish).GetCorpus();
