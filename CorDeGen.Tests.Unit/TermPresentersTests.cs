@@ -51,6 +51,21 @@ namespace CorDeGen.Tests.Unit
         [InlineData(10, "3f2")]
         [InlineData(17, "3f9")]
         [InlineData(26, "1a")]
+        [InlineData(206, "4b6")]
+        [InlineData(218, "4c2")]
+        [InlineData(222, "4c6")]
+        public void PlusFrenchPresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.PlusFrench.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "3f2")]
+        [InlineData(17, "3f9")]
+        [InlineData(26, "1a")]
         [InlineData(173, "87d")]
         [InlineData(218, "4c2")]
         [InlineData(237, "4d5")]
