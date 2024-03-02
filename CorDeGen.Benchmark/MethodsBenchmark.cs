@@ -17,6 +17,13 @@ public class MethodsBenchmark
     }
 
     [Benchmark]
+    public void PlusDigits()
+    {
+        var generator = new CorpusGenerator(N, ITermPresenter.PlusDigits);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
     public void PlusEnglish()
     {
         var generator = new CorpusGenerator(N, ITermPresenter.PlusEnglish);
@@ -59,6 +66,13 @@ public class MethodsBenchmark
     }
 
     [Benchmark]
+    public void NaiveParallel_PlusDigits()
+    {
+        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.PlusDigits, Environment.ProcessorCount);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
     public void NaiveParallel_PlusEnglish()
     {
         var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.PlusEnglish, Environment.ProcessorCount);
@@ -97,6 +111,13 @@ public class MethodsBenchmark
     public void Parallel_Default()
     {
         var generator = new ParallelCorpusGenerator(N, ITermPresenter.Default, Environment.ProcessorCount);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
+    public void Parallel_PlusDigits()
+    {
+        var generator = new ParallelCorpusGenerator(N, ITermPresenter.PlusDigits, Environment.ProcessorCount);
         var corpus = generator.GetCorpus();
     }
 
