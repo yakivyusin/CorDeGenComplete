@@ -9,10 +9,19 @@ internal sealed class PlusItalianTermPresenter : PlusTermPresenterBase
             return false;
         }
 
-        if (term == "ad" || term == "da" ||
-            term == "ebbe" || term == "ecc" ||
-            term == "ed" || term == "fa" ||
-            term == "fece")
+        if (term.Length == 2 &&
+            (term == "ad" || term == "da" || term == "ed" || term == "fa"))
+        {
+            return false;
+        }
+
+        if (term == "ecc")
+        {
+            return false;
+        }
+
+        if (term.Length == 4 &&
+            (term == "ebbe" || term == "fece"))
         {
             return false;
         }
