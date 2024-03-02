@@ -4,7 +4,7 @@ namespace CorDeGen.CLI;
 
 public class Cli
 {
-    private readonly Option<string> _termPresenterGlobalOption = new(name: "--method", description: "default | plus-en | plus-de | plus-fr | plus-it | semantic")
+    private readonly Option<string> _termPresenterGlobalOption = new(name: "--method", description: "default | plus-0-9 | plus-en | plus-de | plus-fr | plus-it | semantic")
     {
         IsRequired = true
     };
