@@ -13,6 +13,11 @@ public class ITermPresenterBinder : BinderBase<ITermPresenter>
     {
         "default" => ITermPresenter.Default,
         "plus" => ITermPresenter.PlusEnglish,
+        "plus-0-9" => ITermPresenter.PlusDigits,
+        "plus-en" => ITermPresenter.PlusEnglish,
+        "plus-de" => ITermPresenter.PlusGerman,
+        "plus-fr" => ITermPresenter.PlusFrench,
+        "plus-it" => ITermPresenter.PlusItalian,
         "semantic" => ITermPresenter.Semantic,
         _ => ITermPresenter.Default
     };

@@ -1,6 +1,6 @@
 ﻿namespace CorDeGen.TermPresenters;
 
-internal sealed class PlusEnglishTermPresenter : PlusTermPresenterBase
+internal sealed class PlusFrenchTermPresenter : PlusTermPresenterBase
 {
     protected override bool IsValidPresentation(string term)
     {
@@ -9,7 +9,8 @@ internal sealed class PlusEnglishTermPresenter : PlusTermPresenterBase
             return false;
         }
 
-        if (term == "be")
+        if (term.Length == 2 &&
+            (term == "ce" || term == "da" || term == "de"))
         {
             return false;
         }
