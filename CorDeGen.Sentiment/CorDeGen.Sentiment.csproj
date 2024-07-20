@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SimpleNetNlp" Version="4.5.0.2" />
+    <PackageReference Include="SimpleNetNlp.Models.LexParser" Version="4.5.5" />
+    <PackageReference Include="SimpleNetNlp.Models.Sentiment" Version="4.5.5" />
+    <PackageReference Include="System.CommandLine.DragonFruit" Version="0.4.0-alpha.22272.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CorDeGen\CorDeGen.csproj" />
+  </ItemGroup>
+
+</Project>

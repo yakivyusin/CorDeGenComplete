@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Semantic": {
+      "commandName": "Project",
+      "commandLineArgs": "--term-count 256 --use-semantic"
+    },
+    "Base": {
+      "commandName": "Project",
+      "commandLineArgs": "--term-count 256"
+    }
+  }
+}

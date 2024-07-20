@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen.Benchmark", "CorDe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen.KMeans", "CorDeGen.KMeans\CorDeGen.KMeans.csproj", "{E6E42F3A-4BF8-48C3-91A4-E407C1DB13F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorDeGen.Tests.Integration", "CorDeGen.Tests.Integration\CorDeGen.Tests.Integration.csproj", "{11FE23E0-9261-4C80-9EA7-3546F22BACB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen.Tests.Integration", "CorDeGen.Tests.Integration\CorDeGen.Tests.Integration.csproj", "{11FE23E0-9261-4C80-9EA7-3546F22BACB2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen.Sentiment", "CorDeGen.Sentiment\CorDeGen.Sentiment.csproj", "{D94A59B9-6789-4B9C-AE96-6F323874D4DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{11FE23E0-9261-4C80-9EA7-3546F22BACB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11FE23E0-9261-4C80-9EA7-3546F22BACB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11FE23E0-9261-4C80-9EA7-3546F22BACB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D94A59B9-6789-4B9C-AE96-6F323874D4DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D94A59B9-6789-4B9C-AE96-6F323874D4DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D94A59B9-6789-4B9C-AE96-6F323874D4DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D94A59B9-6789-4B9C-AE96-6F323874D4DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
