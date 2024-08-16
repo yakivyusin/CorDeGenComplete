@@ -18,8 +18,13 @@ public sealed class CorpusGenerator
         _r = _textCount / 5 + 1;
     }
 
-    public string[] GetCorpus()
+    public string[] GetCorpus() => GetCorpus(" ", Environment.NewLine);
+
+    public string[] GetCorpus(string sameTermsSeparator, string differentTermsSeparator)
     {
+        sameTermsSeparator ??= " ";
+        differentTermsSeparator ??= Environment.NewLine;
+
         var memory = _termCount * _textCount * _textCount / (_textCount / 5 + 2);
         var texts = Enumerable.Range(0, _textCount).Select(x => new StringBuilder(memory)).ToArray();
 
@@ -38,10 +43,9 @@ public sealed class CorpusGenerator
                     termCount *= 2;
                 }
 
-                texts[GetArraySafeIndex(textIndex)].AppendLine(
-                    string.Join(
-                        ' ',
-                        Enumerable.Repeat(term, termCount)));
+                texts[GetArraySafeIndex(textIndex)]
+                    .Append(string.Join(sameTermsSeparator, Enumerable.Repeat(term, termCount)))
+                    .Append(differentTermsSeparator);
             }
         }
 
