@@ -19,35 +19,35 @@ public class MethodsBenchmark
     [Benchmark]
     public void PlusDigits()
     {
-        var generator = new CorpusGenerator(N, ITermPresenter.PlusDigits);
+        var generator = new CorpusGenerator(N, ITermPresenter.Plus.Digits);
         var corpus = generator.GetCorpus();
     }
 
     [Benchmark]
     public void PlusEnglish()
     {
-        var generator = new CorpusGenerator(N, ITermPresenter.PlusEnglish);
+        var generator = new CorpusGenerator(N, ITermPresenter.Plus.WesternEurope.English);
         var corpus = generator.GetCorpus();
     }
 
     [Benchmark]
     public void PlusGerman()
     {
-        var generator = new CorpusGenerator(N, ITermPresenter.PlusGerman);
+        var generator = new CorpusGenerator(N, ITermPresenter.Plus.WesternEurope.German);
         var corpus = generator.GetCorpus();
     }
 
     [Benchmark]
     public void PlusFrench()
     {
-        var generator = new CorpusGenerator(N, ITermPresenter.PlusFrench);
+        var generator = new CorpusGenerator(N, ITermPresenter.Plus.WesternEurope.French);
         var corpus = generator.GetCorpus();
     }
 
     [Benchmark]
     public void PlusItalian()
     {
-        var generator = new CorpusGenerator(N, ITermPresenter.PlusItalian);
+        var generator = new CorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Italian);
         var corpus = generator.GetCorpus();
     }
 
@@ -68,35 +68,35 @@ public class MethodsBenchmark
     [Benchmark]
     public void NaiveParallel_PlusDigits()
     {
-        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.PlusDigits, Environment.ProcessorCount);
+        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.Digits, Environment.ProcessorCount);
         var corpus = generator.GetCorpus();
     }
 
     [Benchmark]
     public void NaiveParallel_PlusEnglish()
     {
-        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.PlusEnglish, Environment.ProcessorCount);
+        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.English, Environment.ProcessorCount);
         var corpus = generator.GetCorpus();
     }
 
     [Benchmark]
     public void NaiveParallel_PlusGerman()
     {
-        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.PlusGerman, Environment.ProcessorCount);
+        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.German, Environment.ProcessorCount);
         var corpus = generator.GetCorpus();
     }
 
     [Benchmark]
     public void NaiveParallel_PlusFrench()
     {
-        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.PlusFrench, Environment.ProcessorCount);
+        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.French, Environment.ProcessorCount);
         var corpus = generator.GetCorpus();
     }
 
     [Benchmark]
     public void NaiveParallel_PlusItalian()
     {
-        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.PlusItalian, Environment.ProcessorCount);
+        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Italian, Environment.ProcessorCount);
         var corpus = generator.GetCorpus();
     }
 
@@ -117,35 +117,35 @@ public class MethodsBenchmark
     [Benchmark]
     public void Parallel_PlusDigits()
     {
-        var generator = new ParallelCorpusGenerator(N, ITermPresenter.PlusDigits, Environment.ProcessorCount);
+        var generator = new ParallelCorpusGenerator(N, ITermPresenter.Plus.Digits, Environment.ProcessorCount);
         var corpus = generator.GetCorpus();
     }
 
     [Benchmark]
     public void Parallel_PlusEnglish()
     {
-        var generator = new ParallelCorpusGenerator(N, ITermPresenter.PlusEnglish, Environment.ProcessorCount);
+        var generator = new ParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.English, Environment.ProcessorCount);
         var corpus = generator.GetCorpus();
     }
 
     [Benchmark]
     public void Parallel_PlusGerman()
     {
-        var generator = new ParallelCorpusGenerator(N, ITermPresenter.PlusGerman, Environment.ProcessorCount);
+        var generator = new ParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.German, Environment.ProcessorCount);
         var corpus = generator.GetCorpus();
     }
 
     [Benchmark]
     public void Parallel_PlusFrench()
     {
-        var generator = new ParallelCorpusGenerator(N, ITermPresenter.PlusFrench, Environment.ProcessorCount);
+        var generator = new ParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.French, Environment.ProcessorCount);
         var corpus = generator.GetCorpus();
     }
 
     [Benchmark]
     public void Parallel_PlusItalian()
     {
-        var generator = new ParallelCorpusGenerator(N, ITermPresenter.PlusItalian, Environment.ProcessorCount);
+        var generator = new ParallelCorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Italian, Environment.ProcessorCount);
         var corpus = generator.GetCorpus();
     }
 

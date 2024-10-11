@@ -14,8 +14,8 @@ public class ParallelGeneratorTests
     [Property]
     public Property ParallelGeneratorTest_PlusDigitsPresenter(PositiveInt termCount)
     {
-        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.PlusDigits).GetCorpus();
-        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.PlusDigits, Environment.ProcessorCount).GetCorpus();
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.Digits).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.Digits, Environment.ProcessorCount).GetCorpus();
 
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
@@ -23,8 +23,8 @@ public class ParallelGeneratorTests
     [Property]
     public Property ParallelGeneratorTest_PlusEnglishPresenter(PositiveInt termCount)
     {
-        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.PlusEnglish).GetCorpus();
-        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.PlusEnglish, Environment.ProcessorCount).GetCorpus();
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.English).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.English, Environment.ProcessorCount).GetCorpus();
 
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
@@ -32,8 +32,8 @@ public class ParallelGeneratorTests
     [Property]
     public Property ParallelGeneratorTest_PlusGermanPresenter(PositiveInt termCount)
     {
-        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.PlusGerman).GetCorpus();
-        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.PlusGerman, Environment.ProcessorCount).GetCorpus();
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.German).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.German, Environment.ProcessorCount).GetCorpus();
 
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
@@ -41,8 +41,8 @@ public class ParallelGeneratorTests
     [Property]
     public Property ParallelGeneratorTest_PlusFrenchPresenter(PositiveInt termCount)
     {
-        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.PlusFrench).GetCorpus();
-        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.PlusFrench, Environment.ProcessorCount).GetCorpus();
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.French).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.French, Environment.ProcessorCount).GetCorpus();
 
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
@@ -50,8 +50,8 @@ public class ParallelGeneratorTests
     [Property]
     public Property ParallelGeneratorTest_PlusItalianPresenter(PositiveInt termCount)
     {
-        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.PlusItalian).GetCorpus();
-        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.PlusItalian, Environment.ProcessorCount).GetCorpus();
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Italian).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Italian, Environment.ProcessorCount).GetCorpus();
 
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }

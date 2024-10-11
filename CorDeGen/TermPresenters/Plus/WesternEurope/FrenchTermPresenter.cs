@@ -1,6 +1,6 @@
-﻿namespace CorDeGen.TermPresenters;
+﻿namespace CorDeGen.TermPresenters.Plus.WesternEurope;
 
-internal sealed class PlusFrenchTermPresenter : PlusTermPresenterBase
+internal sealed class FrenchTermPresenter : PlusTermPresenterBase
 {
     protected override bool IsValidPresentation(string term)
     {

@@ -12,7 +12,7 @@
         public ITermPresenter Presenter => _method switch
         {
             "default" => ITermPresenter.Default,
-            "plus" => ITermPresenter.PlusEnglish,
+            "plus" => ITermPresenter.Plus.WesternEurope.English,
             "semantic" => ITermPresenter.Semantic,
             _ => throw new ArgumentOutOfRangeException(nameof(_method))
         };

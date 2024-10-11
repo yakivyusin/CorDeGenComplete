@@ -29,7 +29,7 @@ namespace CorDeGen.Tests.Unit
         {
             Assert.Equal(
                 expectedPresentation,
-                ITermPresenter.PlusDigits.GetTermPresentation(TermsCount, termIndex));
+                ITermPresenter.Plus.Digits.GetTermPresentation(TermsCount, termIndex));
         }
 
         [Theory]
@@ -42,7 +42,7 @@ namespace CorDeGen.Tests.Unit
         {
             Assert.Equal(
                 expectedPresentation,
-                ITermPresenter.PlusEnglish.GetTermPresentation(TermsCount, termIndex));
+                ITermPresenter.Plus.WesternEurope.English.GetTermPresentation(TermsCount, termIndex));
         }
 
         [Theory]
@@ -56,7 +56,7 @@ namespace CorDeGen.Tests.Unit
         {
             Assert.Equal(
                 expectedPresentation,
-                ITermPresenter.PlusGerman.GetTermPresentation(TermsCount, termIndex));
+                ITermPresenter.Plus.WesternEurope.German.GetTermPresentation(TermsCount, termIndex));
         }
 
         [Theory]
@@ -71,7 +71,7 @@ namespace CorDeGen.Tests.Unit
         {
             Assert.Equal(
                 expectedPresentation,
-                ITermPresenter.PlusFrench.GetTermPresentation(TermsCount, termIndex));
+                ITermPresenter.Plus.WesternEurope.French.GetTermPresentation(TermsCount, termIndex));
         }
 
         [Theory]
@@ -90,7 +90,7 @@ namespace CorDeGen.Tests.Unit
         {
             Assert.Equal(
                 expectedPresentation,
-                ITermPresenter.PlusItalian.GetTermPresentation(TermsCount, termIndex));
+                ITermPresenter.Plus.SouthernEurope.Italian.GetTermPresentation(TermsCount, termIndex));
         }
 
         [Theory]
