@@ -93,6 +93,111 @@ public class NaiveParallelGeneratorTests
     }
 
     [Property]
+    public Property NaiveParallelGeneratorTest_PlusDanishPresenter(PositiveInt termCount)
+    {
+        var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Danish).GetCorpus()
+            .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
+
+        var actualTextBags = new NaiveParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Danish, Environment.ProcessorCount).GetCorpus()
+            .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
+
+        return actualTextBags
+            .Zip(expectedTextBags)
+            .All(x => x.First.SequenceEqual(x.Second))
+            .ToProperty();
+    }
+
+    [Property]
+    public Property NaiveParallelGeneratorTest_PlusIcelandicPresenter(PositiveInt termCount)
+    {
+        var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Icelandic).GetCorpus()
+            .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
+
+        var actualTextBags = new NaiveParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Icelandic, Environment.ProcessorCount).GetCorpus()
+            .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
+
+        return actualTextBags
+            .Zip(expectedTextBags)
+            .All(x => x.First.SequenceEqual(x.Second))
+            .ToProperty();
+    }
+
+    [Property]
+    public Property NaiveParallelGeneratorTest_PlusLithuanianPresenter(PositiveInt termCount)
+    {
+        var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Lithuanian).GetCorpus()
+            .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
+
+        var actualTextBags = new NaiveParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Lithuanian, Environment.ProcessorCount).GetCorpus()
+            .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
+
+        return actualTextBags
+            .Zip(expectedTextBags)
+            .All(x => x.First.SequenceEqual(x.Second))
+            .ToProperty();
+    }
+
+    [Property]
+    public Property NaiveParallelGeneratorTest_PlusLuleSamiPresenter(PositiveInt termCount)
+    {
+        var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.LuleSami).GetCorpus()
+            .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
+
+        var actualTextBags = new NaiveParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.LuleSami, Environment.ProcessorCount).GetCorpus()
+            .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
+
+        return actualTextBags
+            .Zip(expectedTextBags)
+            .All(x => x.First.SequenceEqual(x.Second))
+            .ToProperty();
+    }
+
+    [Property]
+    public Property NaiveParallelGeneratorTest_PlusNorthernSamiPresenter(PositiveInt termCount)
+    {
+        var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.NorthernSami).GetCorpus()
+            .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
+
+        var actualTextBags = new NaiveParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.NorthernSami, Environment.ProcessorCount).GetCorpus()
+            .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
+
+        return actualTextBags
+            .Zip(expectedTextBags)
+            .All(x => x.First.SequenceEqual(x.Second))
+            .ToProperty();
+    }
+
+    [Property]
+    public Property NaiveParallelGeneratorTest_PlusNorwegianPresenter(PositiveInt termCount)
+    {
+        var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Norwegian).GetCorpus()
+            .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
+
+        var actualTextBags = new NaiveParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Norwegian, Environment.ProcessorCount).GetCorpus()
+            .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
+
+        return actualTextBags
+            .Zip(expectedTextBags)
+            .All(x => x.First.SequenceEqual(x.Second))
+            .ToProperty();
+    }
+
+    [Property]
+    public Property NaiveParallelGeneratorTest_PlusSwedishPresenter(PositiveInt termCount)
+    {
+        var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Swedish).GetCorpus()
+            .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
+
+        var actualTextBags = new NaiveParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Swedish, Environment.ProcessorCount).GetCorpus()
+            .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
+
+        return actualTextBags
+            .Zip(expectedTextBags)
+            .All(x => x.First.SequenceEqual(x.Second))
+            .ToProperty();
+    }
+
+    [Property]
     public Property NaiveParallelGeneratorTest_SemanticPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Semantic).GetCorpus()
