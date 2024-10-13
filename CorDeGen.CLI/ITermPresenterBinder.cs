@@ -15,7 +15,7 @@ public class ITermPresenterBinder : BinderBase<ITermPresenter>
         "plus" => ITermPresenter.Plus.WesternEurope.English,
         "plus-0-9" => ITermPresenter.Plus.Digits,
         "plus-en" => ITermPresenter.Plus.WesternEurope.English,
-        "plus-de" => ITermPresenter.Plus.WesternEurope.German,
+        "plus-de" => ITermPresenter.Plus.CentralEurope.German,
         "plus-fr" => ITermPresenter.Plus.WesternEurope.French,
         "plus-it" => ITermPresenter.Plus.SouthernEurope.Italian,
         "plus-da" => ITermPresenter.Plus.NorthernEurope.Danish,

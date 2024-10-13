@@ -56,7 +56,7 @@ namespace CorDeGen.Tests.Unit
         {
             Assert.Equal(
                 expectedPresentation,
-                ITermPresenter.Plus.WesternEurope.German.GetTermPresentation(TermsCount, termIndex));
+                ITermPresenter.Plus.CentralEurope.German.GetTermPresentation(TermsCount, termIndex));
         }
 
         [Theory]

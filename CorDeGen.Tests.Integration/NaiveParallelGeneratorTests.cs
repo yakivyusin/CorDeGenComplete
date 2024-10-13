@@ -50,10 +50,10 @@ public class NaiveParallelGeneratorTests
     [Property]
     public Property NaiveParallelGeneratorTest_PlusGermanPresenter(PositiveInt termCount)
     {
-        var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.German).GetCorpus()
+        var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.German).GetCorpus()
             .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
 
-        var actualTextBags = new NaiveParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.German, Environment.ProcessorCount).GetCorpus()
+        var actualTextBags = new NaiveParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.German, Environment.ProcessorCount).GetCorpus()
             .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
 
         return actualTextBags

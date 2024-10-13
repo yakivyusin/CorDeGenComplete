@@ -33,7 +33,7 @@ public class MethodsBenchmark
     [Benchmark]
     public void PlusGerman()
     {
-        var generator = new CorpusGenerator(N, ITermPresenter.Plus.WesternEurope.German);
+        var generator = new CorpusGenerator(N, ITermPresenter.Plus.CentralEurope.German);
         var corpus = generator.GetCorpus();
     }
 
@@ -131,7 +131,7 @@ public class MethodsBenchmark
     [Benchmark]
     public void NaiveParallel_PlusGerman()
     {
-        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.German, Environment.ProcessorCount);
+        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.CentralEurope.German, Environment.ProcessorCount);
         var corpus = generator.GetCorpus();
     }
 
@@ -229,7 +229,7 @@ public class MethodsBenchmark
     [Benchmark]
     public void Parallel_PlusGerman()
     {
-        var generator = new ParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.German, Environment.ProcessorCount);
+        var generator = new ParallelCorpusGenerator(N, ITermPresenter.Plus.CentralEurope.German, Environment.ProcessorCount);
         var corpus = generator.GetCorpus();
     }
 

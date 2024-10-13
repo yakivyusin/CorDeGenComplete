@@ -1,4 +1,4 @@
-﻿namespace CorDeGen.TermPresenters.Plus.WesternEurope;
+﻿namespace CorDeGen.TermPresenters.Plus.CentralEurope;
 
 internal sealed class GermanTermPresenter : PlusTermPresenterBase
 {

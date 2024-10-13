@@ -32,8 +32,8 @@ public class ParallelGeneratorTests
     [Property]
     public Property ParallelGeneratorTest_PlusGermanPresenter(PositiveInt termCount)
     {
-        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.German).GetCorpus();
-        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.German, Environment.ProcessorCount).GetCorpus();
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.German).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.German, Environment.ProcessorCount).GetCorpus();
 
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
