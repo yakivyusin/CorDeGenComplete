@@ -1,16 +1,11 @@
-﻿namespace CorDeGen.TermPresenters;
+﻿namespace CorDeGen.TermPresenters.Plus.NorthernEurope;
 
-internal sealed class PlusFrenchTermPresenter : PlusTermPresenterBase
+internal class DanishTermPresenter : PlusTermPresenterBase
 {
     protected override bool IsValidPresentation(string term)
     {
-        if (term.Length == 1)
-        {
-            return false;
-        }
-
         if (term.Length == 2 &&
-            (term == "ce" || term == "da" || term == "de"))
+            (term == "de" || term == "da" || term == "ad" || term == "af"))
         {
             return false;
         }

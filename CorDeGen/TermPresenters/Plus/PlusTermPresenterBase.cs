@@ -1,4 +1,4 @@
-﻿namespace CorDeGen.TermPresenters;
+﻿namespace CorDeGen.TermPresenters.Plus;
 
 internal abstract class PlusTermPresenterBase : ITermPresenter
 {

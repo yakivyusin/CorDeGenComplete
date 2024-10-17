@@ -12,12 +12,19 @@ public class ITermPresenterBinder : BinderBase<ITermPresenter>
     protected override ITermPresenter GetBoundValue(BindingContext bindingContext) => bindingContext.ParseResult.GetValueForOption(_termPresenterOption) switch
     {
         "default" => ITermPresenter.Default,
-        "plus" => ITermPresenter.PlusEnglish,
-        "plus-0-9" => ITermPresenter.PlusDigits,
-        "plus-en" => ITermPresenter.PlusEnglish,
-        "plus-de" => ITermPresenter.PlusGerman,
-        "plus-fr" => ITermPresenter.PlusFrench,
-        "plus-it" => ITermPresenter.PlusItalian,
+        "plus" => ITermPresenter.Plus.WesternEurope.English,
+        "plus-0-9" => ITermPresenter.Plus.Digits,
+        "plus-en" => ITermPresenter.Plus.WesternEurope.English,
+        "plus-de" => ITermPresenter.Plus.CentralEurope.German,
+        "plus-fr" => ITermPresenter.Plus.WesternEurope.French,
+        "plus-it" => ITermPresenter.Plus.SouthernEurope.Italian,
+        "plus-da" => ITermPresenter.Plus.NorthernEurope.Danish,
+        "plus-is" => ITermPresenter.Plus.NorthernEurope.Icelandic,
+        "plus-lt" => ITermPresenter.Plus.NorthernEurope.Lithuanian,
+        "plus-smj" => ITermPresenter.Plus.NorthernEurope.LuleSami,
+        "plus-se" => ITermPresenter.Plus.NorthernEurope.NorthernSami,
+        "plus-no" => ITermPresenter.Plus.NorthernEurope.Norwegian,
+        "plus-sv" => ITermPresenter.Plus.NorthernEurope.Swedish,
         "semantic" => ITermPresenter.Semantic,
         _ => ITermPresenter.Default
     };

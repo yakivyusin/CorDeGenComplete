@@ -1,6 +1,6 @@
-﻿namespace CorDeGen.TermPresenters;
+﻿namespace CorDeGen.TermPresenters.Plus.WesternEurope;
 
-internal sealed class PlusGermanTermPresenter : PlusTermPresenterBase
+internal sealed class EnglishTermPresenter : PlusTermPresenterBase
 {
     protected override bool IsValidPresentation(string term)
     {
@@ -9,7 +9,7 @@ internal sealed class PlusGermanTermPresenter : PlusTermPresenterBase
             return false;
         }
 
-        if (term == "ab" || term == "da")
+        if (term == "be")
         {
             return false;
         }

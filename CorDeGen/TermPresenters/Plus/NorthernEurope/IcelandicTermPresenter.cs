@@ -1,27 +1,22 @@
-﻿namespace CorDeGen.TermPresenters;
+﻿namespace CorDeGen.TermPresenters.Plus.NorthernEurope;
 
-internal sealed class PlusItalianTermPresenter : PlusTermPresenterBase
+internal class IcelandicTermPresenter : PlusTermPresenterBase
 {
     protected override bool IsValidPresentation(string term)
     {
-        if (term.Length == 1)
-        {
-            return false;
-        }
-
         if (term.Length == 2 &&
-            (term == "ad" || term == "da" || term == "ed" || term == "fa"))
+            (term == "ed" || term == "af" || term == "aa" || term == "ea"))
         {
             return false;
         }
 
-        if (term == "ecc")
+        if (term == "aaa")
         {
             return false;
         }
 
         if (term.Length == 4 &&
-            (term == "ebbe" || term == "fece"))
+            (term == "daff" || term == "cafa" || term == "abba"))
         {
             return false;
         }

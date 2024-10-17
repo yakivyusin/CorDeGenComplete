@@ -7,7 +7,7 @@
     <Authors>yakivyusin</Authors>
     <Description>CorDeGen implementation</Description>
     <RepositoryUrl>https://github.com/yakivyusin/CorDeGenComplete</RepositoryUrl>
-    <Version>2.1.0</Version>
+    <Version>3.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,14 +1,9 @@
-﻿namespace CorDeGen.TermPresenters;
+﻿namespace CorDeGen.TermPresenters.Plus.NorthernEurope;
 
-internal sealed class PlusEnglishTermPresenter : PlusTermPresenterBase
+internal class LithuanianTermPresenter : PlusTermPresenterBase
 {
     protected override bool IsValidPresentation(string term)
     {
-        if (term.Length == 1)
-        {
-            return false;
-        }
-
         if (term == "be")
         {
             return false;
