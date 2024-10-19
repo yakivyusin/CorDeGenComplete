@@ -156,10 +156,10 @@ public class ParallelGeneratorTests
     }
 
     [Property]
-    public Property ParallelGeneratorTest_PlusSlovenePresenter(PositiveInt termCount)
+    public Property ParallelGeneratorTest_PlusSlovenianPresenter(PositiveInt termCount)
     {
-        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Slovene).GetCorpus();
-        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Slovene, Environment.ProcessorCount).GetCorpus();
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Slovenian).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Slovenian, Environment.ProcessorCount).GetCorpus();
 
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }

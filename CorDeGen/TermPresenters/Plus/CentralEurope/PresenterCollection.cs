@@ -12,5 +12,5 @@ public class PresenterCollection
 
     public ITermPresenter Slovak => new SlovakTermPresenter();
 
-    public ITermPresenter Slovene => new SloveneTermPresenter();
+    public ITermPresenter Slovenian => new SlovenianTermPresenter();
 }

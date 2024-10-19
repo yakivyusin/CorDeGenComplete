@@ -29,7 +29,7 @@ public class ITermPresenterBinder : BinderBase<ITermPresenter>
         "plus-hu" => ITermPresenter.Plus.CentralEurope.Hungarian,
         "plus-pl" => ITermPresenter.Plus.CentralEurope.Polish,
         "plus-sk" => ITermPresenter.Plus.CentralEurope.Slovak,
-        "plus-sl" => ITermPresenter.Plus.CentralEurope.Slovene,
+        "plus-sl" => ITermPresenter.Plus.CentralEurope.Slovenian,
         "semantic" => ITermPresenter.Semantic,
         _ => ITermPresenter.Default
     };

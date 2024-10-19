@@ -258,12 +258,12 @@ public class NaiveParallelGeneratorTests
     }
 
     [Property]
-    public Property NaiveParallelGeneratorTest_PlusSlovenePresenter(PositiveInt termCount)
+    public Property NaiveParallelGeneratorTest_PlusSlovenianPresenter(PositiveInt termCount)
     {
-        var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Slovene).GetCorpus()
+        var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Slovenian).GetCorpus()
             .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
 
-        var actualTextBags = new NaiveParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Slovene, Environment.ProcessorCount).GetCorpus()
+        var actualTextBags = new NaiveParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Slovenian, Environment.ProcessorCount).GetCorpus()
             .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
 
         return actualTextBags

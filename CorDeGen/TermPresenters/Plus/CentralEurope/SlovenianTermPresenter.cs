@@ -1,6 +1,6 @@
 ﻿namespace CorDeGen.TermPresenters.Plus.CentralEurope;
 
-internal sealed class SloveneTermPresenter : PlusTermPresenterBase
+internal sealed class SlovenianTermPresenter : PlusTermPresenterBase
 {
     protected override bool IsValidPresentation(string term)
     {

@@ -267,11 +267,11 @@ namespace CorDeGen.Tests.Unit
         [InlineData(17, "3f9")]
         [InlineData(26, "1a")]
         [InlineData(218, "4c2")]
-        public void PlusSloveneTermPresenterTest(int termIndex, string expectedPresentation)
+        public void PlusSlovenianTermPresenterTest(int termIndex, string expectedPresentation)
         {
             Assert.Equal(
                 expectedPresentation,
-                ITermPresenter.Plus.CentralEurope.Slovene.GetTermPresentation(TermsCount, termIndex));
+                ITermPresenter.Plus.CentralEurope.Slovenian.GetTermPresentation(TermsCount, termIndex));
         }
 
         [Theory]
