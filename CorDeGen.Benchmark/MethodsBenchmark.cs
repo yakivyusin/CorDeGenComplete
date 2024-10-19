@@ -101,6 +101,41 @@ public class MethodsBenchmark
     }
 
     [Benchmark]
+    public void PlusCzech()
+    {
+        var generator = new CorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Czech);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
+    public void PlusHungarian()
+    {
+        var generator = new CorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Hungarian);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
+    public void PlusPolish()
+    {
+        var generator = new CorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Polish);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
+    public void PlusSlovak()
+    {
+        var generator = new CorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Slovak);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
+    public void PlusSlovenian()
+    {
+        var generator = new CorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Slovenian);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
     public void Semantic()
     {
         var generator = new CorpusGenerator(N, ITermPresenter.Semantic);
@@ -199,6 +234,41 @@ public class MethodsBenchmark
     }
 
     [Benchmark]
+    public void NaiveParallel_PlusCzech()
+    {
+        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Czech, Environment.ProcessorCount);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
+    public void NaiveParallel_PlusHungarian()
+    {
+        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Hungarian, Environment.ProcessorCount);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
+    public void NaiveParallel_PlusPolish()
+    {
+        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Polish, Environment.ProcessorCount);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
+    public void NaiveParallel_PlusSlovak()
+    {
+        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Slovak, Environment.ProcessorCount);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
+    public void NaiveParallel_PlusSlovenian()
+    {
+        var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Slovenian, Environment.ProcessorCount);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
     public void NaiveParallel_Semantic()
     {
         var generator = new NaiveParallelCorpusGenerator(N, ITermPresenter.Semantic, Environment.ProcessorCount);
@@ -293,6 +363,41 @@ public class MethodsBenchmark
     public void Parallel_PlusSwedish()
     {
         var generator = new ParallelCorpusGenerator(N, ITermPresenter.Plus.NorthernEurope.Swedish, Environment.ProcessorCount);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
+    public void Parallel_PlusCzech()
+    {
+        var generator = new ParallelCorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Czech, Environment.ProcessorCount);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
+    public void Parallel_PlusHungarian()
+    {
+        var generator = new ParallelCorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Hungarian, Environment.ProcessorCount);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
+    public void Parallel_PlusPolish()
+    {
+        var generator = new ParallelCorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Polish, Environment.ProcessorCount);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
+    public void Parallel_PlusSlovak()
+    {
+        var generator = new ParallelCorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Slovak, Environment.ProcessorCount);
+        var corpus = generator.GetCorpus();
+    }
+
+    [Benchmark]
+    public void Parallel_PlusSlovenian()
+    {
+        var generator = new ParallelCorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Slovenian, Environment.ProcessorCount);
         var corpus = generator.GetCorpus();
     }
 
