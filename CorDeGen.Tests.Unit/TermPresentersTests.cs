@@ -199,6 +199,82 @@ namespace CorDeGen.Tests.Unit
         }
 
         [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "3f2")]
+        [InlineData(11, "b")]
+        [InlineData(17, "3f9")]
+        [InlineData(26, "1a")]
+        public void PlusCzechTermPresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.Plus.CentralEurope.Czech.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "3f2")]
+        [InlineData(11, "b")]
+        [InlineData(14, "3f6")]
+        [InlineData(17, "3f9")]
+        [InlineData(26, "1a")]
+        [InlineData(190, "4a6")]
+        [InlineData(222, "4c6")]
+        [InlineData(43962, "afa2")]
+        [InlineData(60350, "efa6")]
+        public void PlusHungarianTermPresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.Plus.CentralEurope.Hungarian.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "3f2")]
+        [InlineData(11, "b")]
+        [InlineData(17, "3f9")]
+        [InlineData(26, "1a")]
+        public void PlusPolishTermPresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.Plus.CentralEurope.Polish.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "3f2")]
+        [InlineData(11, "b")]
+        [InlineData(17, "3f9")]
+        [InlineData(26, "1a")]
+        [InlineData(186, "4a2")]
+        public void PlusSlovakTermPresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.Plus.CentralEurope.Slovak.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "3f2")]
+        [InlineData(11, "3f3")]
+        [InlineData(12, "3f4")]
+        [InlineData(13, "3f5")]
+        [InlineData(14, "3f6")]
+        [InlineData(15, "3f7")]
+        [InlineData(17, "3f9")]
+        [InlineData(26, "1a")]
+        [InlineData(218, "4c2")]
+        public void PlusSloveneTermPresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.Plus.CentralEurope.Slovene.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
         [InlineData(0, "be")]
         [InlineData(10, "we")]
         [InlineData(17, "make")]
