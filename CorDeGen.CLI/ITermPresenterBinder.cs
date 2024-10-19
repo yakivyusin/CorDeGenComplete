@@ -25,6 +25,11 @@ public class ITermPresenterBinder : BinderBase<ITermPresenter>
         "plus-se" => ITermPresenter.Plus.NorthernEurope.NorthernSami,
         "plus-no" => ITermPresenter.Plus.NorthernEurope.Norwegian,
         "plus-sv" => ITermPresenter.Plus.NorthernEurope.Swedish,
+        "plus-cs" => ITermPresenter.Plus.CentralEurope.Czech,
+        "plus-hu" => ITermPresenter.Plus.CentralEurope.Hungarian,
+        "plus-pl" => ITermPresenter.Plus.CentralEurope.Polish,
+        "plus-sk" => ITermPresenter.Plus.CentralEurope.Slovak,
+        "plus-sl" => ITermPresenter.Plus.CentralEurope.Slovene,
         "semantic" => ITermPresenter.Semantic,
         _ => ITermPresenter.Default
     };
