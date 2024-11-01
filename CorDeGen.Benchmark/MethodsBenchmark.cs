@@ -64,6 +64,21 @@ public class MethodsBenchmark
     public string[] PlusSlovenian() => new CorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Slovenian).GetCorpus();
 
     [Benchmark]
+    public string[] PlusLatin() => new CorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Latin).GetCorpus();
+
+    [Benchmark]
+    public string[] PlusMaltese() => new CorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Maltese).GetCorpus();
+
+    [Benchmark]
+    public string[] PlusPortuguese() => new CorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Portuguese).GetCorpus();
+
+    [Benchmark]
+    public string[] PlusSpanish() => new CorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Spanish).GetCorpus();
+
+    [Benchmark]
+    public string[] PlusTurkish() => new CorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Turkish).GetCorpus();
+
+    [Benchmark]
     public string[] Semantic() => new CorpusGenerator(N, ITermPresenter.Semantic).GetCorpus();
 
     [Benchmark]
@@ -136,6 +151,26 @@ public class MethodsBenchmark
 
     [Benchmark]
     public string[] NaiveParallel_PlusSlovenian() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Slovenian, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] NaiveParallel_PlusLatin() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Latin, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] NaiveParallel_PlusMaltese() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Maltese, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] NaiveParallel_PlusPortuguese() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Portuguese, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] NaiveParallel_PlusSpanish() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Spanish, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] NaiveParallel_PlusTurkish() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Turkish, Environment.ProcessorCount)
         .GetCorpus();
 
     [Benchmark]
@@ -212,6 +247,26 @@ public class MethodsBenchmark
 
     [Benchmark]
     public string[] Parallel_PlusSlovenian() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.CentralEurope.Slovenian, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] Parallel_PlusLatin() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Latin, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] Parallel_PlusMaltese() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Maltese, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] Parallel_PlusPortuguese() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Portuguese, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] Parallel_PlusSpanish() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Spanish, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] Parallel_PlusTurkish() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Turkish, Environment.ProcessorCount)
         .GetCorpus();
 
     [Benchmark]
