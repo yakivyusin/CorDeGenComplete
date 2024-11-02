@@ -27,6 +27,11 @@ public class ITermPresenterBinder : BinderBase<ITermPresenter>
         ["plus-pl"] = () => ITermPresenter.Plus.CentralEurope.Polish,
         ["plus-sk"] = () => ITermPresenter.Plus.CentralEurope.Slovak,
         ["plus-sl"] = () => ITermPresenter.Plus.CentralEurope.Slovenian,
+        ["plus-la"] = () => ITermPresenter.Plus.SouthernEurope.Latin,
+        ["plus-mt"] = () => ITermPresenter.Plus.SouthernEurope.Maltese,
+        ["plus-pt"] = () => ITermPresenter.Plus.SouthernEurope.Portuguese,
+        ["plus-es"] = () => ITermPresenter.Plus.SouthernEurope.Spanish,
+        ["plus-tr"] = () => ITermPresenter.Plus.SouthernEurope.Turkish,
         ["semantic"] = () => ITermPresenter.Semantic,
     }.ToFrozenDictionary();
 
