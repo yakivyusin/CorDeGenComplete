@@ -15,7 +15,7 @@ internal sealed class SpanishTermPresenter : PlusTermPresenterBase
             return false;
         }
 
-        if (term.Length == 2 &&
+        if (term.Length == 4 &&
             (term == "cada" || term == "debe"))
         {
             return false;

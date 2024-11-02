@@ -275,6 +275,90 @@ namespace CorDeGen.Tests.Unit
         }
 
         [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "3f2")]
+        [InlineData(14, "3f6")]
+        [InlineData(17, "3f9")]
+        [InlineData(26, "1a")]
+        [InlineData(171, "87b")]
+        [InlineData(172, "87c")]
+        [InlineData(173, "87d")]
+        [InlineData(222, "4c6")]
+        public void PlusLatinPresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.Plus.SouthernEurope.Latin.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "3f2")]
+        [InlineData(17, "3f9")]
+        [InlineData(26, "1a")]
+        [InlineData(222, "4c6")]
+        [InlineData(60378, "efc2")]
+        public void PlusMaltesePresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.Plus.SouthernEurope.Maltese.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "3f2")]
+        [InlineData(14, "3f6")]
+        [InlineData(17, "3f9")]
+        [InlineData(26, "1a")]
+        [InlineData(218, "4c2")]
+        [InlineData(222, "4c6")]
+        [InlineData(51930, "cec2")]
+        public void PlusPortuguesePresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.Plus.SouthernEurope.Portuguese.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "3f2")]
+        [InlineData(11, "3f3")]
+        [InlineData(12, "3f4")]
+        [InlineData(13, "3f5")]
+        [InlineData(14, "3f6")]
+        [InlineData(15, "3f7")]
+        [InlineData(17, "3f9")]
+        [InlineData(26, "1a")]
+        [InlineData(218, "4c2")]
+        [InlineData(222, "4c6")]
+        [InlineData(51930, "cec2")]
+        [InlineData(57022, "e2a6")]
+        public void PlusSpanishPresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.Plus.SouthernEurope.Spanish.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "a")]
+        [InlineData(17, "3f9")]
+        [InlineData(26, "1a")]
+        [InlineData(218, "4c2")]
+        [InlineData(222, "4c6")]
+        [InlineData(57082, "e2e2")]
+        [InlineData(707258, "acea2")]
+        public void PlusTurkishPresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.Plus.SouthernEurope.Turkish.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
         [InlineData(0, "be")]
         [InlineData(10, "we")]
         [InlineData(17, "make")]
