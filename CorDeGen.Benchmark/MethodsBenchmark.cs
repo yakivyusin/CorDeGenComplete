@@ -79,6 +79,15 @@ public class MethodsBenchmark
     public string[] PlusTurkish() => new CorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Turkish).GetCorpus();
 
     [Benchmark]
+    public string[] PlusDutch() => new CorpusGenerator(N, ITermPresenter.Plus.WesternEurope.Dutch).GetCorpus();
+
+    [Benchmark]
+    public string[] PlusIrish() => new CorpusGenerator(N, ITermPresenter.Plus.WesternEurope.Irish).GetCorpus();
+
+    [Benchmark]
+    public string[] PlusLuxembourgish() => new CorpusGenerator(N, ITermPresenter.Plus.WesternEurope.Luxembourgish).GetCorpus();
+
+    [Benchmark]
     public string[] Semantic() => new CorpusGenerator(N, ITermPresenter.Semantic).GetCorpus();
 
     [Benchmark]
@@ -171,6 +180,18 @@ public class MethodsBenchmark
 
     [Benchmark]
     public string[] NaiveParallel_PlusTurkish() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Turkish, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] NaiveParallel_PlusDutch() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.Dutch, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] NaiveParallel_PlusIrish() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.Irish, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] NaiveParallel_PlusLuxembourgish() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.Luxembourgish, Environment.ProcessorCount)
         .GetCorpus();
 
     [Benchmark]
@@ -267,6 +288,18 @@ public class MethodsBenchmark
 
     [Benchmark]
     public string[] Parallel_PlusTurkish() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Turkish, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] Parallel_PlusDutch() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.Dutch, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] Parallel_PlusIrish() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.Irish, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] Parallel_PlusLuxembourgish() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.Luxembourgish, Environment.ProcessorCount)
         .GetCorpus();
 
     [Benchmark]
