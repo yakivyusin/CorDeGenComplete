@@ -210,6 +210,33 @@ public class ParallelGeneratorTests
     }
 
     [Property]
+    public Property ParallelGeneratorTest_PlusDutchPresenter(PositiveInt termCount)
+    {
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.Dutch).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.Dutch, Environment.ProcessorCount).GetCorpus();
+
+        return actualTexts.SequenceEqual(expectedTexts).ToProperty();
+    }
+
+    [Property]
+    public Property ParallelGeneratorTest_PlusIrishPresenter(PositiveInt termCount)
+    {
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.Irish).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.Irish, Environment.ProcessorCount).GetCorpus();
+
+        return actualTexts.SequenceEqual(expectedTexts).ToProperty();
+    }
+
+    [Property]
+    public Property ParallelGeneratorTest_PlusLuxembourgishPresenter(PositiveInt termCount)
+    {
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.Luxembourgish).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.Luxembourgish, Environment.ProcessorCount).GetCorpus();
+
+        return actualTexts.SequenceEqual(expectedTexts).ToProperty();
+    }
+
+    [Property]
     public Property ParallelGeneratorTest_SemanticPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Semantic).GetCorpus();
