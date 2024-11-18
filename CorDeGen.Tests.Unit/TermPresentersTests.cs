@@ -359,6 +359,51 @@ namespace CorDeGen.Tests.Unit
         }
 
         [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "a")]
+        [InlineData(17, "3f9")]
+        [InlineData(175, "87f")]
+        [InlineData(222, "4c6")]
+        [InlineData(57069, "e2d5")]
+        public void PlusDutchPresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.Plus.WesternEurope.Dutch.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "3f2")]
+        [InlineData(11, "b")]
+        [InlineData(17, "3f9")]
+        [InlineData(186, "4a2")]
+        [InlineData(222, "4c6")]
+        public void PlusIrishPresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.Plus.WesternEurope.Irish.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "3f2")]
+        [InlineData(11, "b")]
+        [InlineData(14, "3f6")]
+        [InlineData(17, "3f9")]
+        [InlineData(218, "4c2")]
+        [InlineData(222, "4c6")]
+        [InlineData(238, "4d6")]
+        [InlineData(3566, "11d6")]
+        public void PlusLuxembourgishPresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.Plus.WesternEurope.Luxembourgish.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
         [InlineData(0, "be")]
         [InlineData(10, "we")]
         [InlineData(17, "make")]
