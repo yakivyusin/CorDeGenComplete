@@ -409,11 +409,11 @@ namespace CorDeGen.Tests.Unit
         [InlineData(17, "make")]
         [InlineData(26, "like")]
         [InlineData(190, "job")]
-        public void SemanticTermPresenterTest(int termIndex, string expectedPresentation)
+        public void DictionaryBasedTermPresenterTest(int termIndex, string expectedPresentation)
         {
             Assert.Equal(
                 expectedPresentation,
-                ITermPresenter.Semantic.GetTermPresentation(TermsCount, termIndex));
+                ITermPresenter.DictionaryBased.GetTermPresentation(TermsCount, termIndex));
         }
     }
 }

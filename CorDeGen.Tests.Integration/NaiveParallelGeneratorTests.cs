@@ -393,12 +393,12 @@ public class NaiveParallelGeneratorTests
     }
 
     [Property]
-    public Property NaiveParallelGeneratorTest_SemanticPresenter(PositiveInt termCount)
+    public Property NaiveParallelGeneratorTest_DictionaryBasedPresenter(PositiveInt termCount)
     {
-        var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Semantic).GetCorpus()
+        var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.DictionaryBased).GetCorpus()
             .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
 
-        var actualTextBags = new NaiveParallelCorpusGenerator(termCount.Get, ITermPresenter.Semantic, Environment.ProcessorCount).GetCorpus()
+        var actualTextBags = new NaiveParallelCorpusGenerator(termCount.Get, ITermPresenter.DictionaryBased, Environment.ProcessorCount).GetCorpus()
             .Select(x => x.Split(new[] { " ", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
 
         return actualTextBags

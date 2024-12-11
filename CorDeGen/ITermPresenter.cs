@@ -9,7 +9,7 @@ public interface ITermPresenter
 
     public static PlusTermPresenterCollection Plus => new ();
 
-    public static ITermPresenter Semantic => new SemanticTermPresenter();
+    public static ITermPresenter DictionaryBased => new DictionaryBasedTermPresenter();
 
     string GetTermPresentation(int termsCount, int termIndex);
 }

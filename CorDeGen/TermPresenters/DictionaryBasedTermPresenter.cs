@@ -2,7 +2,7 @@
 
 namespace CorDeGen.TermPresenters;
 
-internal sealed class SemanticTermPresenter : ITermPresenter
+internal sealed class DictionaryBasedTermPresenter : ITermPresenter
 {
     private static readonly string[] _dictionary = Resources.Lemmas.ReplaceLineEndings().Split(Environment.NewLine);
 

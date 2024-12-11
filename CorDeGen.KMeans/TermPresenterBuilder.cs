@@ -13,7 +13,7 @@
         {
             "default" => ITermPresenter.Default,
             "plus" => ITermPresenter.Plus.WesternEurope.English,
-            "semantic" => ITermPresenter.Semantic,
+            "dict" => ITermPresenter.DictionaryBased,
             _ => throw new ArgumentOutOfRangeException(nameof(_method))
         };
     }

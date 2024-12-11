@@ -237,10 +237,10 @@ public class ParallelGeneratorTests
     }
 
     [Property]
-    public Property ParallelGeneratorTest_SemanticPresenter(PositiveInt termCount)
+    public Property ParallelGeneratorTest_DictionaryBasedPresenter(PositiveInt termCount)
     {
-        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Semantic).GetCorpus();
-        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Semantic, Environment.ProcessorCount).GetCorpus();
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.DictionaryBased).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.DictionaryBased, Environment.ProcessorCount).GetCorpus();
 
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }

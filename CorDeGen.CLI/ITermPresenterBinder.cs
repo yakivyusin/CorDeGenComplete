@@ -35,7 +35,8 @@ public class ITermPresenterBinder : BinderBase<ITermPresenter>
         ["plus-nl"] = () => ITermPresenter.Plus.WesternEurope.Dutch,
         ["plus-ga"] = () => ITermPresenter.Plus.WesternEurope.Irish,
         ["plus-lb"] = () => ITermPresenter.Plus.WesternEurope.Luxembourgish,
-        ["semantic"] = () => ITermPresenter.Semantic,
+        ["semantic"] = () => ITermPresenter.DictionaryBased,
+        ["dict"] = () => ITermPresenter.DictionaryBased
     }.ToFrozenDictionary();
 
     public static IEnumerable<string> SupportedKeys => _factories.Keys;

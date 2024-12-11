@@ -88,7 +88,7 @@ public class MethodsBenchmark
     public string[] PlusLuxembourgish() => new CorpusGenerator(N, ITermPresenter.Plus.WesternEurope.Luxembourgish).GetCorpus();
 
     [Benchmark]
-    public string[] Semantic() => new CorpusGenerator(N, ITermPresenter.Semantic).GetCorpus();
+    public string[] DictionaryBased() => new CorpusGenerator(N, ITermPresenter.DictionaryBased).GetCorpus();
 
     [Benchmark]
     public string[] NaiveParallel_Default() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Default, Environment.ProcessorCount)
@@ -195,7 +195,7 @@ public class MethodsBenchmark
         .GetCorpus();
 
     [Benchmark]
-    public string[] NaiveParallel_Semantic() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Semantic, Environment.ProcessorCount)
+    public string[] NaiveParallel_DictionaryBased() => new NaiveParallelCorpusGenerator(N, ITermPresenter.DictionaryBased, Environment.ProcessorCount)
         .GetCorpus();
 
     [Benchmark]
@@ -303,6 +303,6 @@ public class MethodsBenchmark
         .GetCorpus();
 
     [Benchmark]
-    public string[] Parallel_Semantic() => new ParallelCorpusGenerator(N, ITermPresenter.Semantic, Environment.ProcessorCount)
+    public string[] Parallel_DictionaryBased() => new ParallelCorpusGenerator(N, ITermPresenter.DictionaryBased, Environment.ProcessorCount)
         .GetCorpus();
 }
