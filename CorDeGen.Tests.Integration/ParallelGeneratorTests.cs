@@ -237,6 +237,42 @@ public class ParallelGeneratorTests
     }
 
     [Property]
+    public Property ParallelGeneratorTest_PlusAlbanianPresenter(PositiveInt termCount)
+    {
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SoutheasternEurope.Albanian).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.SoutheasternEurope.Albanian, Environment.ProcessorCount).GetCorpus();
+
+        return actualTexts.SequenceEqual(expectedTexts).ToProperty();
+    }
+
+    [Property]
+    public Property ParallelGeneratorTest_PlusBosnianPresenter(PositiveInt termCount)
+    {
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SoutheasternEurope.Bosnian).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.SoutheasternEurope.Bosnian, Environment.ProcessorCount).GetCorpus();
+
+        return actualTexts.SequenceEqual(expectedTexts).ToProperty();
+    }
+
+    [Property]
+    public Property ParallelGeneratorTest_PlusCroatianPresenter(PositiveInt termCount)
+    {
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SoutheasternEurope.Croatian).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.SoutheasternEurope.Croatian, Environment.ProcessorCount).GetCorpus();
+
+        return actualTexts.SequenceEqual(expectedTexts).ToProperty();
+    }
+
+    [Property]
+    public Property ParallelGeneratorTest_PlusRomanianPresenter(PositiveInt termCount)
+    {
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SoutheasternEurope.Romanian).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.SoutheasternEurope.Romanian, Environment.ProcessorCount).GetCorpus();
+
+        return actualTexts.SequenceEqual(expectedTexts).ToProperty();
+    }
+
+    [Property]
     public Property ParallelGeneratorTest_DictionaryBasedPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.DictionaryBased).GetCorpus();
