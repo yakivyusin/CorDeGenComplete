@@ -35,6 +35,10 @@ public class ITermPresenterBinder : BinderBase<ITermPresenter>
         ["plus-nl"] = () => ITermPresenter.Plus.WesternEurope.Dutch,
         ["plus-ga"] = () => ITermPresenter.Plus.WesternEurope.Irish,
         ["plus-lb"] = () => ITermPresenter.Plus.WesternEurope.Luxembourgish,
+        ["plus-sq"] = () => ITermPresenter.Plus.SoutheasternEurope.Albanian,
+        ["plus-bs"] = () => ITermPresenter.Plus.SoutheasternEurope.Bosnian,
+        ["plus-hr"] = () => ITermPresenter.Plus.SoutheasternEurope.Croatian,
+        ["plus-ro"] = () => ITermPresenter.Plus.SoutheasternEurope.Romanian,
         ["semantic"] = () => ITermPresenter.DictionaryBased,
         ["dict"] = () => ITermPresenter.DictionaryBased
     }.ToFrozenDictionary();
