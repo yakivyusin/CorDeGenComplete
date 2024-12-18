@@ -88,6 +88,18 @@ public class MethodsBenchmark
     public string[] PlusLuxembourgish() => new CorpusGenerator(N, ITermPresenter.Plus.WesternEurope.Luxembourgish).GetCorpus();
 
     [Benchmark]
+    public string[] PlusAlbanian() => new CorpusGenerator(N, ITermPresenter.Plus.SoutheasternEurope.Albanian).GetCorpus();
+
+    [Benchmark]
+    public string[] PlusBosnian() => new CorpusGenerator(N, ITermPresenter.Plus.SoutheasternEurope.Bosnian).GetCorpus();
+
+    [Benchmark]
+    public string[] PlusCroatian() => new CorpusGenerator(N, ITermPresenter.Plus.SoutheasternEurope.Croatian).GetCorpus();
+
+    [Benchmark]
+    public string[] PlusRomanian() => new CorpusGenerator(N, ITermPresenter.Plus.SoutheasternEurope.Romanian).GetCorpus();
+
+    [Benchmark]
     public string[] DictionaryBased() => new CorpusGenerator(N, ITermPresenter.DictionaryBased).GetCorpus();
 
     [Benchmark]
@@ -192,6 +204,22 @@ public class MethodsBenchmark
 
     [Benchmark]
     public string[] NaiveParallel_PlusLuxembourgish() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.Luxembourgish, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] NaiveParallel_PlusAlbanian() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.SoutheasternEurope.Albanian, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] NaiveParallel_PlusBosnian() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.SoutheasternEurope.Bosnian, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] NaiveParallel_PlusCroatian() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.SoutheasternEurope.Croatian, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] NaiveParallel_PlusRomanian() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.SoutheasternEurope.Romanian, Environment.ProcessorCount)
         .GetCorpus();
 
     [Benchmark]
@@ -300,6 +328,22 @@ public class MethodsBenchmark
 
     [Benchmark]
     public string[] Parallel_PlusLuxembourgish() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.Luxembourgish, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] Parallel_PlusAlbanian() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.SoutheasternEurope.Albanian, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] Parallel_PlusBosnian() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.SoutheasternEurope.Bosnian, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] Parallel_PlusCroatian() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.SoutheasternEurope.Croatian, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] Parallel_PlusRomanian() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.SoutheasternEurope.Romanian, Environment.ProcessorCount)
         .GetCorpus();
 
     [Benchmark]
