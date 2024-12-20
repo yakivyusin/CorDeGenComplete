@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CorDeGen\CorDeGen.csproj" />
+    <ProjectReference Include="..\..\src\CorDeGen\CorDeGen.csproj" />
   </ItemGroup>
 
 </Project>

@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen", "CorDeGen\CorDeGen.csproj", "{3472E9AE-0A67-45FF-87A7-957A92DA4CB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen", "src\CorDeGen\CorDeGen.csproj", "{3472E9AE-0A67-45FF-87A7-957A92DA4CB3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen.Tests.Unit", "CorDeGen.Tests.Unit\CorDeGen.Tests.Unit.csproj", "{671C33E8-385C-400E-AE9F-3273FC549BB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen.Tests.Unit", "test\CorDeGen.Tests.Unit\CorDeGen.Tests.Unit.csproj", "{671C33E8-385C-400E-AE9F-3273FC549BB0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen.CLI", "CorDeGen.CLI\CorDeGen.CLI.csproj", "{E6452957-E61D-4D0E-8981-9A08E94E8B5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen.CLI", "src\CorDeGen.CLI\CorDeGen.CLI.csproj", "{E6452957-E61D-4D0E-8981-9A08E94E8B5A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen.Benchmark", "CorDeGen.Benchmark\CorDeGen.Benchmark.csproj", "{4B4BE2E4-A7A4-4437-964E-034B9D982D73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen.Benchmark", "test\CorDeGen.Benchmark\CorDeGen.Benchmark.csproj", "{4B4BE2E4-A7A4-4437-964E-034B9D982D73}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen.KMeans", "CorDeGen.KMeans\CorDeGen.KMeans.csproj", "{E6E42F3A-4BF8-48C3-91A4-E407C1DB13F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen.KMeans", "sample\CorDeGen.KMeans\CorDeGen.KMeans.csproj", "{E6E42F3A-4BF8-48C3-91A4-E407C1DB13F4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen.Tests.Integration", "CorDeGen.Tests.Integration\CorDeGen.Tests.Integration.csproj", "{11FE23E0-9261-4C80-9EA7-3546F22BACB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen.Tests.Integration", "test\CorDeGen.Tests.Integration\CorDeGen.Tests.Integration.csproj", "{11FE23E0-9261-4C80-9EA7-3546F22BACB2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen.Sentiment", "CorDeGen.Sentiment\CorDeGen.Sentiment.csproj", "{D94A59B9-6789-4B9C-AE96-6F323874D4DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorDeGen.Sentiment", "sample\CorDeGen.Sentiment\CorDeGen.Sentiment.csproj", "{D94A59B9-6789-4B9C-AE96-6F323874D4DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
