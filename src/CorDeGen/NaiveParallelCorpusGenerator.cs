@@ -8,12 +8,14 @@ public sealed class NaiveParallelCorpusGenerator
     private readonly int _textCount;
     private readonly int _r;
     private readonly ITermPresenter _termPresenter;
+    private readonly ITextLengthEstimator _textLengthEstimator;
     private readonly int _parallelismDegree;
 
     public NaiveParallelCorpusGenerator(int termCount, ITermPresenter termPresenter, int parallelismDegree)
     {
         _termCount = termCount;
         _termPresenter = termPresenter;
+        _textLengthEstimator = termPresenter.GetTextLengthEstimator();
         _parallelismDegree = parallelismDegree;
 
         _textCount = (int)Math.Pow(_termCount, 0.25);
@@ -22,8 +24,11 @@ public sealed class NaiveParallelCorpusGenerator
 
     public string[] GetCorpus()
     {
-        var memory = _termCount * _textCount * _textCount / (_textCount / 5 + 2);
-        var texts = Enumerable.Range(0, _textCount).Select(x => new StringBuilder(memory)).ToArray();
+        var texts = Enumerable.Range(0, _textCount)
+            .Select(textIndex => _textLengthEstimator.Estimate(_termCount, _textCount, _r, 1, Environment.NewLine.Length, textIndex))
+            .Select(length => new StringBuilder(length))
+            .ToArray();
+
         var options = new ParallelOptions
         {
             MaxDegreeOfParallelism = _parallelismDegree
@@ -37,18 +42,11 @@ public sealed class NaiveParallelCorpusGenerator
 
             for (int textIndex = centralTextIndex - _r; textIndex <= centralTextIndex + _r; textIndex++)
             {
-                var termCount = termTotalCount / (2 * _r + 2);
+                var termCount = termTotalCount * (textIndex == centralTextIndex ? 2 : 1) / (2 * _r + 2);
 
-                if (textIndex == centralTextIndex)
+                lock (texts[textIndex.Mod(_textCount)])
                 {
-                    termCount *= 2;
-                }
-
-                var safeIndex = GetArraySafeIndex(textIndex);
-
-                lock (texts[safeIndex])
-                {
-                    texts[safeIndex].AppendLine(
+                    texts[textIndex.Mod(_textCount)].AppendLine(
                         string.Join(
                             ' ',
                             Enumerable.Repeat(term, termCount)));
@@ -58,11 +56,4 @@ public sealed class NaiveParallelCorpusGenerator
 
         return texts.Select(x => x.ToString()).ToArray();
     }
-
-    private int GetArraySafeIndex(int index) => index switch
-    {
-        int i when i < 0 => _textCount + i,
-        int i when i >= _textCount => i % _textCount,
-        _ => index
-    };
 }

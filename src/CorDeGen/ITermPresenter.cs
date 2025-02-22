@@ -12,4 +12,6 @@ public interface ITermPresenter
     public static ITermPresenter DictionaryBased => new DictionaryBasedTermPresenter();
 
     string GetTermPresentation(int termsCount, int termIndex);
+
+    ITextLengthEstimator GetTextLengthEstimator() => ITextLengthEstimator.Heuristic;
 }
