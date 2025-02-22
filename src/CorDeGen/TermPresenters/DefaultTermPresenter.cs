@@ -1,6 +1,10 @@
-﻿namespace CorDeGen.TermPresenters;
+﻿using CorDeGen.TextLengthEstimators;
+
+namespace CorDeGen.TermPresenters;
 
 internal sealed class DefaultTermPresenter : ITermPresenter
 {
     public string GetTermPresentation(int termsCount, int termIndex) => Convert.ToString(termIndex, 16);
+
+    public ITextLengthEstimator GetTextLengthEstimator() => new DefaultPresenterExactEstimator();
 }
