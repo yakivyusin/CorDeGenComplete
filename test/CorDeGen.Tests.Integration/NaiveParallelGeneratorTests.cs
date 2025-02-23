@@ -2,7 +2,7 @@ namespace CorDeGen.Tests.Integration;
 
 public class NaiveParallelGeneratorTests
 {
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_DefaultPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Default).GetCorpus()
@@ -17,7 +17,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusDigitsPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.Digits).GetCorpus()
@@ -32,7 +32,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusEnglishPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.English).GetCorpus()
@@ -47,7 +47,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusGermanPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.German).GetCorpus()
@@ -62,7 +62,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusFrenchPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.French).GetCorpus()
@@ -77,7 +77,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusItalianPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Italian).GetCorpus()
@@ -92,7 +92,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusDanishPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Danish).GetCorpus()
@@ -107,7 +107,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusIcelandicPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Icelandic).GetCorpus()
@@ -122,7 +122,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusLithuanianPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Lithuanian).GetCorpus()
@@ -137,7 +137,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusLuleSamiPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.LuleSami).GetCorpus()
@@ -152,7 +152,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusNorthernSamiPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.NorthernSami).GetCorpus()
@@ -167,7 +167,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusNorwegianPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Norwegian).GetCorpus()
@@ -182,7 +182,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusSwedishPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Swedish).GetCorpus()
@@ -197,7 +197,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusCzechPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Czech).GetCorpus()
@@ -212,7 +212,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusHungarianPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Hungarian).GetCorpus()
@@ -227,7 +227,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusPolishPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Polish).GetCorpus()
@@ -242,7 +242,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusSlovakPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Slovak).GetCorpus()
@@ -257,7 +257,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusSlovenianPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Slovenian).GetCorpus()
@@ -272,7 +272,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusLatinPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Latin).GetCorpus()
@@ -287,7 +287,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusMaltesePresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Maltese).GetCorpus()
@@ -302,7 +302,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusPortuguesePresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Portuguese).GetCorpus()
@@ -317,7 +317,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusSpanishPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Spanish).GetCorpus()
@@ -332,7 +332,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusTurkishPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Turkish).GetCorpus()
@@ -347,7 +347,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusDutchPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.Dutch).GetCorpus()
@@ -362,7 +362,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusIrishPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.Irish).GetCorpus()
@@ -377,7 +377,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusLuxembourgishPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.Luxembourgish).GetCorpus()
@@ -392,7 +392,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusAlbanianPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SoutheasternEurope.Albanian).GetCorpus()
@@ -407,7 +407,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusBosnianPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SoutheasternEurope.Bosnian).GetCorpus()
@@ -422,7 +422,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusCroatianPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SoutheasternEurope.Croatian).GetCorpus()
@@ -437,7 +437,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_PlusRomanianPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SoutheasternEurope.Romanian).GetCorpus()
@@ -452,7 +452,7 @@ public class NaiveParallelGeneratorTests
             .ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_DictionaryBasedPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.DictionaryBased).GetCorpus()

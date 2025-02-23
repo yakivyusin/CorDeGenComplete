@@ -2,7 +2,7 @@ namespace CorDeGen.Tests.Integration;
 
 public class ParallelGeneratorTests
 {
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_DefaultPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Default).GetCorpus();
@@ -11,7 +11,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusDigitsPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.Digits).GetCorpus();
@@ -20,7 +20,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusEnglishPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.English).GetCorpus();
@@ -29,7 +29,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusGermanPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.German).GetCorpus();
@@ -38,7 +38,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusFrenchPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.French).GetCorpus();
@@ -47,7 +47,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusItalianPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Italian).GetCorpus();
@@ -56,7 +56,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusDanishPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Danish).GetCorpus();
@@ -65,7 +65,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusIcelandicPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Icelandic).GetCorpus();
@@ -74,7 +74,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusLithuanianPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Lithuanian).GetCorpus();
@@ -83,7 +83,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusLuleSamiPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.LuleSami).GetCorpus();
@@ -92,7 +92,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusNorthernSamiPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.NorthernSami).GetCorpus();
@@ -101,7 +101,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusNorwegianPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Norwegian).GetCorpus();
@@ -110,7 +110,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusSwedishPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.NorthernEurope.Swedish).GetCorpus();
@@ -119,7 +119,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusCzechPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Czech).GetCorpus();
@@ -128,7 +128,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusHungarianPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Hungarian).GetCorpus();
@@ -137,7 +137,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusPolishPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Polish).GetCorpus();
@@ -146,7 +146,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusSlovakPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Slovak).GetCorpus();
@@ -155,7 +155,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusSlovenianPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.CentralEurope.Slovenian).GetCorpus();
@@ -164,7 +164,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusLatinPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Latin).GetCorpus();
@@ -173,7 +173,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusMaltesePresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Maltese).GetCorpus();
@@ -182,7 +182,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusPortuguesePresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Portuguese).GetCorpus();
@@ -191,7 +191,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusSpanishPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Spanish).GetCorpus();
@@ -200,7 +200,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusTurkishPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Turkish).GetCorpus();
@@ -209,7 +209,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusDutchPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.Dutch).GetCorpus();
@@ -218,7 +218,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusIrishPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.Irish).GetCorpus();
@@ -227,7 +227,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusLuxembourgishPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.WesternEurope.Luxembourgish).GetCorpus();
@@ -236,7 +236,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusAlbanianPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SoutheasternEurope.Albanian).GetCorpus();
@@ -245,7 +245,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusBosnianPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SoutheasternEurope.Bosnian).GetCorpus();
@@ -254,7 +254,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusCroatianPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SoutheasternEurope.Croatian).GetCorpus();
@@ -263,7 +263,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_PlusRomanianPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SoutheasternEurope.Romanian).GetCorpus();
@@ -272,7 +272,7 @@ public class ParallelGeneratorTests
         return actualTexts.SequenceEqual(expectedTexts).ToProperty();
     }
 
-    [Property]
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_DictionaryBasedPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.DictionaryBased).GetCorpus();
