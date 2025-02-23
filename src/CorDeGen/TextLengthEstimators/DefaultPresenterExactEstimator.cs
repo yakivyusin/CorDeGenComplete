@@ -8,11 +8,11 @@ internal sealed class DefaultPresenterExactEstimator : ITextLengthEstimator
 
         foreach (var currentTermIndex in GetTermsForDocument(textIndex, textCount, r, termCount))
         {
-            var currentTermLength = currentTermIndex == 0 ? 1 : 1 + (int)(Math.Log10(currentTermIndex) / Math.Log10(16));
+            var currentTermLength = Math.Max(1, 1 + (int)(Math.Log10(currentTermIndex) / Math.Log10(16)));
             var currentTermIndexByMod = currentTermIndex % textCount;
             var currentTermCount = textCount * (currentTermIndexByMod + 1) * (2 - Math.Sign(Math.Abs(textIndex - currentTermIndexByMod))) / (2 * r + 2);
 
-            sum += currentTermCount * currentTermLength + (currentTermCount - 1) * sameTermsSeparatorLength + differentTermsSeparatorLength;
+            sum += currentTermCount * (currentTermLength + sameTermsSeparatorLength) - sameTermsSeparatorLength + differentTermsSeparatorLength;
         }
 
         return sum;
