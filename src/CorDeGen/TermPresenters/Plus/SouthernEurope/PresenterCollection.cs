@@ -15,4 +15,6 @@ public class PresenterCollection
     public ITermPresenter Turkish => new TurkishTermPresenter();
 
     public ITermPresenter Basque => new BasqueTermPresenter();
+
+    public ITermPresenter Catalan => new CatalanTermPresenter();
 }

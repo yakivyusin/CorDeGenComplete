@@ -483,6 +483,21 @@ public class NaiveParallelGeneratorTests
     }
 
     [Property(StartSize = 1296, EndSize = 3000)]
+    public Property NaiveParallelGeneratorTest_PlusCatalanPresenter(PositiveInt termCount)
+    {
+        var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Catalan).GetCorpus()
+            .Select(x => x.Split([" ", Environment.NewLine], StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
+
+        var actualTextBags = new NaiveParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Catalan, Environment.ProcessorCount).GetCorpus()
+            .Select(x => x.Split([" ", Environment.NewLine], StringSplitOptions.RemoveEmptyEntries).OrderBy(x => x));
+
+        return actualTextBags
+            .Zip(expectedTextBags)
+            .All(x => x.First.SequenceEqual(x.Second))
+            .ToProperty();
+    }
+
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property NaiveParallelGeneratorTest_DictionaryBasedPresenter(PositiveInt termCount)
     {
         var expectedTextBags = new CorpusGenerator(termCount.Get, ITermPresenter.DictionaryBased).GetCorpus()
