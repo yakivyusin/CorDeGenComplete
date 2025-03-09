@@ -300,6 +300,15 @@ public class ParallelGeneratorTests
     }
 
     [Property(StartSize = 1296, EndSize = 3000)]
+    public Property ParallelGeneratorTest_PlusGalicianPresenter(PositiveInt termCount)
+    {
+        var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Galician).GetCorpus();
+        var actualTexts = new ParallelCorpusGenerator(termCount.Get, ITermPresenter.Plus.SouthernEurope.Galician, Environment.ProcessorCount).GetCorpus();
+
+        return actualTexts.SequenceEqual(expectedTexts).ToProperty();
+    }
+
+    [Property(StartSize = 1296, EndSize = 3000)]
     public Property ParallelGeneratorTest_DictionaryBasedPresenter(PositiveInt termCount)
     {
         var expectedTexts = new CorpusGenerator(termCount.Get, ITermPresenter.DictionaryBased).GetCorpus();
