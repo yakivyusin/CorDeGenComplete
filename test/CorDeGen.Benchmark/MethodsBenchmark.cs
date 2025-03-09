@@ -103,6 +103,9 @@ public class MethodsBenchmark
     public string[] PlusBasque() => new CorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Basque).GetCorpus();
 
     [Benchmark]
+    public string[] PlusBreton() => new CorpusGenerator(N, ITermPresenter.Plus.WesternEurope.Breton).GetCorpus();
+
+    [Benchmark]
     public string[] DictionaryBased() => new CorpusGenerator(N, ITermPresenter.DictionaryBased).GetCorpus();
 
     [Benchmark]
@@ -227,6 +230,10 @@ public class MethodsBenchmark
 
     [Benchmark]
     public string[] NaiveParallel_PlusBasque() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Basque, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] NaiveParallel_PlusBreton() => new NaiveParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.Breton, Environment.ProcessorCount)
         .GetCorpus();
 
     [Benchmark]
@@ -355,6 +362,10 @@ public class MethodsBenchmark
 
     [Benchmark]
     public string[] Parallel_PlusBasque() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.SouthernEurope.Basque, Environment.ProcessorCount)
+        .GetCorpus();
+
+    [Benchmark]
+    public string[] Parallel_PlusBreton() => new ParallelCorpusGenerator(N, ITermPresenter.Plus.WesternEurope.Breton, Environment.ProcessorCount)
         .GetCorpus();
 
     [Benchmark]

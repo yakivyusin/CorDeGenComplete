@@ -11,4 +11,6 @@ public class PresenterCollection
     public ITermPresenter Irish => new IrishTermPresenter();
 
     public ITermPresenter Luxembourgish => new LuxembourgishTermPresenter();
+
+    public ITermPresenter Breton => new BretonTermPresenter();
 }

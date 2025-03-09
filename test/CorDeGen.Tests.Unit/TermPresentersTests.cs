@@ -499,6 +499,32 @@ namespace CorDeGen.Tests.Unit
         }
 
         [Theory]
+        [InlineData(0, "3e8")]
+        [InlineData(10, "3f2")]
+        [InlineData(14, "3f6")]
+        [InlineData(17, "3f9")]
+        [InlineData(26, "1a")]
+        [InlineData(174, "87e")]
+        [InlineData(186, "4a2")]
+        [InlineData(218, "4c2")]
+        [InlineData(256, "4e8")]
+        [InlineData(2746, "ea2")]
+        [InlineData(2797, "ed5")]
+        [InlineData(2814, "ee6")]
+        [InlineData(2989, "f95")]
+        [InlineData(4077, "13d5")]
+        [InlineData(45037, "b3d5")]
+        [InlineData(48894, "c2e6")]
+        [InlineData(57086, "e2e6")]
+        [InlineData(61421, "f3d5")]
+        public void PlusBretonPresenterTest(int termIndex, string expectedPresentation)
+        {
+            Assert.Equal(
+                expectedPresentation,
+                ITermPresenter.Plus.WesternEurope.Breton.GetTermPresentation(TermsCount, termIndex));
+        }
+
+        [Theory]
         [InlineData(0, "be")]
         [InlineData(10, "we")]
         [InlineData(17, "make")]

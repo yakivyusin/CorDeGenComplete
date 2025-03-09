@@ -40,6 +40,7 @@ public class ITermPresenterBinder : BinderBase<ITermPresenter>
         ["plus-hr"] = () => ITermPresenter.Plus.SoutheasternEurope.Croatian,
         ["plus-ro"] = () => ITermPresenter.Plus.SoutheasternEurope.Romanian,
         ["plus-eu"] = () => ITermPresenter.Plus.SouthernEurope.Basque,
+        ["plus-br"] = () => ITermPresenter.Plus.WesternEurope.Breton,
         ["semantic"] = () => ITermPresenter.DictionaryBased,
         ["dict"] = () => ITermPresenter.DictionaryBased
     }.ToFrozenDictionary();
