@@ -9,6 +9,7 @@ public class ITermPresenterBinder : BinderBase<ITermPresenter>
     private static readonly FrozenDictionary<string, Func<ITermPresenter>> _factories = new Dictionary<string, Func<ITermPresenter>>()
     {
         ["default"] = () => ITermPresenter.Default,
+        ["default-fast"] = () => ITermPresenter.DefaultFast,
         ["plus"] = () => ITermPresenter.Plus.WesternEurope.English,
         ["plus-0-9"] = () => ITermPresenter.Plus.Digits,
         ["plus-en"] = () => ITermPresenter.Plus.WesternEurope.English,

@@ -5,7 +5,9 @@ namespace CorDeGen;
 
 public interface ITermPresenter
 {
-    public static ITermPresenter Default => new DefaultTermPresenter();
+    public static ITermPresenter Default => new DefaultTermPresenter(true);
+
+    public static ITermPresenter DefaultFast => new DefaultTermPresenter(false);
 
     public static PlusTermPresenterCollection Plus => new ();
 

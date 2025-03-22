@@ -13,7 +13,7 @@ public class TextEstimationBenchmark
     public string[] Sequential_StringBuilderDefault() => new CorpusGenerator(N, new DefaultPresenterWrapper(ITextLengthEstimator.DefaultStringBuilderCapacity)).GetCorpus();
 
     [Benchmark]
-    public string[] Sequential_Heuristic() => new CorpusGenerator(N, new DefaultPresenterWrapper(ITextLengthEstimator.Heuristic)).GetCorpus();
+    public string[] Sequential_Heuristic() => new CorpusGenerator(N, ITermPresenter.DefaultFast).GetCorpus();
 
     [Benchmark]
     public string[] Sequential_Exact() => new CorpusGenerator(N, ITermPresenter.Default).GetCorpus();
@@ -24,7 +24,7 @@ public class TextEstimationBenchmark
 
     [Benchmark]
     public string[] NaiveParallel_Heuristic() =>
-        new NaiveParallelCorpusGenerator(N, new DefaultPresenterWrapper(ITextLengthEstimator.Heuristic), Environment.ProcessorCount).GetCorpus();
+        new NaiveParallelCorpusGenerator(N, ITermPresenter.DefaultFast, Environment.ProcessorCount).GetCorpus();
 
     [Benchmark]
     public string[] NaiveParallel_Exact() =>
@@ -36,7 +36,7 @@ public class TextEstimationBenchmark
 
     [Benchmark]
     public string[] Parallel_Heuristic() =>
-        new ParallelCorpusGenerator(N, new DefaultPresenterWrapper(ITextLengthEstimator.Heuristic), Environment.ProcessorCount).GetCorpus();
+        new ParallelCorpusGenerator(N, ITermPresenter.DefaultFast, Environment.ProcessorCount).GetCorpus();
 
     [Benchmark]
     public string[] Parallel_Exact() =>
