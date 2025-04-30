@@ -2,6 +2,9 @@
 
 namespace CorDeGen;
 
+/// <summary>
+/// Parallel corpus generator (parallel CorDeGen).
+/// </summary>
 public sealed class ParallelCorpusGenerator
 {
     private readonly int _termCount;
@@ -11,6 +14,9 @@ public sealed class ParallelCorpusGenerator
     private readonly ITextLengthEstimator _textLengthEstimator;
     private readonly int _parallelismDegree;
 
+    /// <summary>
+    /// Initializes generator with passed parameters.
+    /// </summary>
     public ParallelCorpusGenerator(int termCount, ITermPresenter termPresenter, int parallelismDegree)
     {
         _termCount = termCount;
@@ -22,6 +28,9 @@ public sealed class ParallelCorpusGenerator
         _r = _textCount / 5 + 1;
     }
 
+    /// <summary>
+    /// Generate corpus based on parameters from ctor.
+    /// </summary>
     public string[] GetCorpus()
     {
         var tasks = new Task<StringBuilder[]>[_parallelismDegree];

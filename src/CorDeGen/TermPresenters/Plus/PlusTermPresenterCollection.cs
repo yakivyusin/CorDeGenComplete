@@ -6,17 +6,27 @@ using SoutheasternEuropeCollection = CorDeGen.TermPresenters.Plus.SoutheasternEu
 
 namespace CorDeGen.TermPresenters.Plus;
 
-public class PlusTermPresenterCollection
+/// <summary>Collection of CorDeGen+ variations.</summary>
+public sealed class PlusTermPresenterCollection
 {
+    /// <summary>CorDeGen+ variations for Western European languages.</summary>
     public WesternEuropeCollection WesternEurope => new ();
-    
+
+    /// <summary>CorDeGen+ variations for Southern European languages.</summary>
     public SouthernEuropeCollection SouthernEurope => new ();
 
+    /// <summary>CorDeGen+ variations for Northern European languages.</summary>
     public NorthernEuropeCollection NorthernEurope => new ();
 
+    /// <summary>CorDeGen+ variations for Central European languages.</summary>
     public CentralEuropeCollection CentralEurope => new ();
 
+    /// <summary>CorDeGen+ variations for Southeastern European languages.</summary>
     public SoutheasternEuropeCollection SoutheasternEurope => new ();
 
+    /// <summary>CorDeGen+(0-9) variation.</summary>
+    /// <remarks>Excludes: decimal digits only.</remarks>
     public ITermPresenter Digits => new DigitsTermPresenter();
+
+    internal PlusTermPresenterCollection() { }
 }

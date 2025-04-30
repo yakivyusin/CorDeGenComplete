@@ -2,6 +2,9 @@
 
 namespace CorDeGen;
 
+/// <summary>
+/// Sequential corpus generator (basic CorDeGen).
+/// </summary>
 public sealed class CorpusGenerator
 {
     private readonly int _termCount;
@@ -10,6 +13,9 @@ public sealed class CorpusGenerator
     private readonly ITermPresenter _termPresenter;
     private readonly ITextLengthEstimator _textLengthEstimator;
 
+    /// <summary>
+    /// Initializes generator with passed parameters.
+    /// </summary>
     public CorpusGenerator(int termCount, ITermPresenter termPresenter)
     {
         _termCount = termCount;
@@ -20,8 +26,14 @@ public sealed class CorpusGenerator
         _r = _textCount / 5 + 1;
     }
 
+    /// <summary>
+    /// Generate corpus based on parameters from ctor.
+    /// </summary>
     public string[] GetCorpus() => GetCorpus(" ", Environment.NewLine);
 
+    /// <summary>
+    /// Generate corpus based on parameters from ctor.
+    /// </summary>
     public string[] GetCorpus(string sameTermsSeparator, string differentTermsSeparator)
     {
         sameTermsSeparator ??= " ";

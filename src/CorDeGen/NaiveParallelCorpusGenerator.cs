@@ -2,6 +2,9 @@
 
 namespace CorDeGen;
 
+/// <summary>
+/// Naive parallel corpus generator (naive parallel CorDeGen).
+/// </summary>
 public sealed class NaiveParallelCorpusGenerator
 {
     private readonly int _termCount;
@@ -11,6 +14,9 @@ public sealed class NaiveParallelCorpusGenerator
     private readonly ITextLengthEstimator _textLengthEstimator;
     private readonly int _parallelismDegree;
 
+    /// <summary>
+    /// Initializes generator with passed parameters.
+    /// </summary>
     public NaiveParallelCorpusGenerator(int termCount, ITermPresenter termPresenter, int parallelismDegree)
     {
         _termCount = termCount;
@@ -22,6 +28,9 @@ public sealed class NaiveParallelCorpusGenerator
         _r = _textCount / 5 + 1;
     }
 
+    /// <summary>
+    /// Generate corpus based on parameters from ctor.
+    /// </summary>
     public string[] GetCorpus()
     {
         var texts = Enumerable.Range(0, _textCount)

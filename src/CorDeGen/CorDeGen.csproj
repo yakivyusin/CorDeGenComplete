@@ -8,6 +8,11 @@
     <Description>CorDeGen implementation</Description>
     <RepositoryUrl>https://github.com/yakivyusin/CorDeGenComplete</RepositoryUrl>
     <Version>3.0.0</Version>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <WarningsAsErrors>$(WarningsAsErrors);NU1605;CS1591</WarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup>
